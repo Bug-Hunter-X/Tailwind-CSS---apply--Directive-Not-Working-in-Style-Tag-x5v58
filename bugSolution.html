@@ -1,0 +1,27 @@
+The correct way to apply styles is to move the styles out of the style tag and into your main CSS file or use standard CSS directly within the style tag.
+
+```html
+<!-- bugSolution.html -->
+<style>
+  .my-element {
+    background-color: blue;
+    color: white;
+  }
+</style>
+
+<div class="my-element">This text is now blue and white.</div>
+```
+
+Alternatively, define the styles in your main CSS file and then just apply the class name.
+
+```css
+/* main.css */
+.my-element {
+  @apply bg-blue-500 text-white;
+}
+```
+
+```html
+<!-- index.html -->
+<div class="my-element">This text is now blue and white.</div>
+```
