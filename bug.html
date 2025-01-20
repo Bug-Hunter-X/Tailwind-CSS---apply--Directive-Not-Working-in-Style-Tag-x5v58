@@ -1,0 +1,11 @@
+This issue is caused by the use of Tailwind's `@apply` directive within a style tag. The `@apply` directive is designed to be used within the main CSS file or other CSS files imported into the main CSS file.  When used within a style tag, it is often ignored by Tailwind's build process, leading to classes not being applied.  
+
+```html
+<style>
+  .my-element {
+    @apply bg-blue-500 text-white;
+  }
+</style>
+
+<div class="my-element">This text should be blue and white.</div>
+```
